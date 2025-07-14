@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACHELOR OF COMMERCE</title>
+   <link rel="stylesheet" href="bcom.css">
+</head>
+<body>
+    <div class="top-bar">
+    <span>📞 04923272318</span>
+    <span>📧 bharathamathacollege@gmail.com</span>
+  </div>
+<div class="image">
+  <img src="image1/424ff9b1-2912-42dc-8387-6bf9248a9d59.png">
+</div>
+<header class="header">
+  <h1>BACHELOR OF COMMERCE</h1>
+</header>
+  <nav class="navbar">
+      <a href="#">HOME</a>      
+          <a href="#">ABOUT US</a>
+    <div class="dropdown">
+      <a href="#">DEPARTMENTS ▾</a>
+      <div class="dropdown-menu">
+        <ul>
+          <li class="submenu">
+            <a href="#">BCOM FINANCE</a>
+          </li>
+          <li class="submenu">
+            <a href="#">BCOM COMPUTER APPLICATION</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">INFRASTRUCTURE ▾</a>
+      <div class="dropdown-menu">
+        <ul>
+          <li><a href="#">Seminar Room</a></li>
+          <li><a href="#">Chavara Hall</a></li>
+          <li><a href="#">Sick Room</a></li>
+          <li><a href="#">Sports Facility</a></li>
+          <li><a href="#">Library</a></li>
+        </ul>
+      </div>
+    </div>   
+    <a href="#Contact Us">CONTACTS</a>
+  </nav>
+  <DIV class="prg">
+    <p>
+      The Bachelor of Commerce (B.Com) under the Four Year Undergraduate Programme (FYUGP) is a structured and flexible degree designed as per the National Education Policy (NEP) 2020. This programme integrates holistic and multidisciplinary education, focusing on building strong foundations in commerce and business studies along with skill development, research orientation, and professional preparedness. Students begin with broad-based courses in the initial semesters and move towards specialised and advanced courses in their chosen discipline as they progress.
+    </p>
+    <p>
+      In B.Com FYUGP, the curriculum covers core subjects such as Financial Accounting, Business Laws, Economics, Management Principles, Taxation, and Marketing. It also includes Ability Enhancement and Skill Enhancement courses to develop communication skills, digital literacy, and analytical abilities essential for the modern business environment. The four-year structure offers an exit option after three years with a B.Com degree or completion of the fourth year with a Honours or Honours with Research degree, equipping students for employment, competitive exams, entrepreneurship, or further academic pursuits like MBA, CA, CMA, CS, or postgraduate research programmes.
+    </p>
+  </DIV>
+ <section class="cards-section">
+    <div class="image-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img class="base-img" src="image1/thin-line-flat-design-banner-260nw-366791360.webp" alt="Department Mission">
+      </div>
+      <div class="flip-card-back">
+        <p>The mission of the Department of Commerce is to provide high-quality education in commerce and business studies, fostering academic excellence, professional skills, ethical values, and entrepreneurial spirit among students. The department is committed to nurturing competent graduates equipped with critical thinking, analytical ability, and practical knowledge to meet the dynamic needs of industry and society, thereby contributing to national development and global progress.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="image-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img class="base-img" src="image1/vision-thinking-progress-invention-design-260nw-465634250.webp" alt="Department vission" style="width:100%; height:80%;">
+      </div>
+      <div class="flip-card-back">
+        <p>To be a centre of excellence in commerce education, fostering innovation, research, and holistic development to create globally competent, socially responsible, and ethically driven professionals who contribute effectively to business, industry, and society.
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="image-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img class="base-img" src="image1/depositphotos_428844304-stock-photo-phrase-core-values-made-wooden.jpg" alt="Department core values" style="width:100%; height:80%;">
+      </div>
+      <div class="flip-card-back">
+        <p>The Department of Commerce upholds a strong commitment to academic excellence, integrity, and ethical conduct in all its endeavours. It fosters a culture of inclusivity, respect, and teamwork while encouraging innovation, critical thinking, and continuous learning among students and faculty. The department values social responsibility, aiming to nurture graduates who contribute positively to the community and uphold professional standards with honesty, accountability, and dedication.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="testimonials">
+  <div class="testimonial-slider">
+    <button class="prev" onclick="prevTestimonial()">🡨</button>
+
+    <div class="testimonial" id="testimonial-text">
+      <!-- Testimonial text will appear here -->
+    </div>
+
+    <button class="next" onclick="nextTestimonial()">🡪</button>
+  </div>
+</section>
+
+<script>
+  const testimonials = [
+    "Education is the most powerful weapon which you can use to change the world. – Nelson Mandela",
+    "The roots of education are bitter, but the fruit is sweet. – Aristotle",
+    "Education is not preparation for life; education is life itself. – John Dewey",
+    "An investment in knowledge pays the best interest. – Benjamin Franklin",
+    "The purpose of education is to replace an empty mind with an open one. – Malcolm Forbes",
+    "Education is the passport to the future, for tomorrow belongs to those who prepare for it today. – Malcolm X",
+    "Live as if you were to die tomorrow. Learn as if you were to live forever. – Mahatma Gandhi"
+  ];
+
+  let currentTestimonial = 0;
+  const testimonialText = document.getElementById("testimonial-text");
+
+  function showTestimonial(index) {
+    testimonialText.textContent = testimonials[index];
+  }
+
+  function nextTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  }
+
+  function prevTestimonial() {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  }
+
+  // Show the first testimonial initially
+  showTestimonial(currentTestimonial);
+</script>
+</body>
+</html>
