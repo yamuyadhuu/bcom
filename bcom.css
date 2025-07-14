@@ -1,0 +1,277 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #a4acb3; 
+  
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f5f5f5;
+  color: #004a8f;
+  padding: 5px 15px;
+  font-size: 18px;
+}
+
+.top-bar span {
+  margin-left: 15px;
+}
+.image img{ 
+  width: 100%;
+  height: 300px;
+}
+
+.header{
+ display: flex;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  background-image: url(5f90c9d7-ce16-4ebf-acee-4e367ef1d924.png);
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  color:rgb(49, 152, 152);
+
+  font-size: 100%;  
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+.navbar {
+  display: flex;
+  padding-left: 120px;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #0068bc;
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.navbar a:hover {
+  background-color: #004a8f;
+}
+
+.prg {
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000; 
+  letter-spacing: 1px; 
+  line-height: 1.5; 
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #0068bc;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #004a8f;
+}
+
+/* Show main dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Submenu */
+.dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #0068bc;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show submenu on hover */
+.submenu:hover .dropdown-submenu {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .dropdown-menu,
+  .dropdown-submenu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .dropdown-submenu {
+    display: none;
+  }
+
+  .submenu:hover .dropdown-submenu {
+    display: block;
+  }
+}.cards-section {
+  display: flex;
+ gap: 1rem;
+ flex-wrap: wrap;
+ justify-content: center;
+  background-color: #f5f5f5; 
+}
+
+/* Container for each card to enable perspective */
+.image-container {
+  perspective: 1000px;
+  width: 300px; /* adjust as needed */
+}
+
+/* Flip card outer structure */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 350px; /* adjust height as needed */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #002147; 
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #002147; /* navy blue back */
+  color: white;
+  transform: rotateY(180deg);
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  overflow-y: auto; /* enables scroll if content overflows */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 1000px) {
+  .image-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    width: 100%;
+  }
+}
+
+.testimonials {
+  background-color: #f0f0f0; /* light grey background for contrast */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* spacing between buttons and text */
+}
+
+.testimonial {
+  max-width: 600px;
+  background-color: #002147; /* navy blue box for text */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.5rem; /* increased font size */
+  line-height: 1.6;
+  font-style: italic;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button.prev, button.next {
+  background-color: #800000; /* maroon buttons for your theme */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 2rem; /* larger arrow buttons */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: #a52a2a; /* darker shade on hover */
+}
